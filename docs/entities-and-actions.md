@@ -35,6 +35,7 @@ Created for dimmers, color controllers, notification indicators, and switches co
 Created for relay actuators, smart plugs, wired bus outputs, and switching groups.
 - Standard `turn_on`, `turn_off`, and `toggle` controls.
 - **Companion Internal On Time**: Channels with an on-time configured in the Homematic IP app provide a `switch` entity (`Use Internal On Time`). Enabling this switch passes the preset duration with every `turn_on` command.
+- **Operation Lock**: Devices with an operation lock, such as radiator thermostats, provide a config `switch` that locks the buttons on the device itself (child lock).
 
 ### Lock (`lock`)
 Created for smart door locks (such as HmIP-DLD).
@@ -63,6 +64,7 @@ Created for numeric values and diagnostic metrics:
 - **Energy and Power**: Active power (W), accumulated energy consumption (kWh), solar generation (kWh), gas volume (m3).
 - **Water**: Flow rate (L/min), volume (L).
 - **Hardware Diagnostics**: Duty cycle (%), carrier sense radio traffic (%), signal strength (RSSI in dBm), passage height, distance.
+- **Valve State**: Adaption state of radiator thermostat valves, for example `adaption_done`, `adjustment_too_big` or `error_position`.
 
 ### Event (`event`)
 Created for stateless button transmitters and wall remotes:

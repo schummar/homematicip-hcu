@@ -183,6 +183,10 @@
     "entity_id": "sensor.multi_sensor_operation_days",
     "friendly_name": "Multi Sensor Operation Days"
   },
+  "dev-all-features_1_operationLockActive": {
+    "entity_id": "switch.multi_sensor_operation_lock",
+    "friendly_name": "Multi Sensor Operation Lock"
+  },
   "dev-all-features_1_particulateMassConcentrationOne": {
     "entity_id": "sensor.multi_sensor_pm1_concentration",
     "friendly_name": "Multi Sensor PM1 Concentration"
@@ -362,6 +366,10 @@
   "dev-all-features_1_valvePosition": {
     "entity_id": "sensor.multi_sensor_valve_position",
     "friendly_name": "Multi Sensor Valve Position"
+  },
+  "dev-all-features_1_valveState": {
+    "entity_id": "sensor.multi_sensor_valve_state",
+    "friendly_name": "Multi Sensor Valve State"
   },
   "dev-all-features_1_vaporAmount": {
     "entity_id": "sensor.multi_sensor_absolute_humidity",

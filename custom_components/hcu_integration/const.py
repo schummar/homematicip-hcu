@@ -549,6 +549,7 @@ API_PATHS = {
     "SET_HUE": "/hmip/device/control/setHueSaturationDimLevel",
     "SET_HUE_WITH_TIME": "/hmip/device/control/setHueSaturationDimLevelWithTime",
     "SET_LOCK_STATE": "/hmip/device/control/setLockState",
+    "SET_OPERATION_LOCK": "/hmip/device/configuration/setOperationLock",
     "SET_OPTICAL_SIGNAL_BEHAVIOUR": "/hmip/device/control/setOpticalSignal",
     "SET_OPTICAL_SIGNAL_BEHAVIOUR_WITH_TIME": "/hmip/device/control/setOpticalSignalWithTime",
     "SET_PRIMARY_SHADING_LEVEL": "/hmip/device/control/setPrimaryShadingLevel",  # For SHADING_CHANNEL devices (e.g., HmIP-HDM1)
@@ -1507,6 +1508,18 @@ HMIP_FEATURE_TO_ENTITY: dict[str, dict[str, Any]] = {
         "translation_key": "temperature_offset",
         "class": "HcuTemperatureOffset",
         "name": "Temperature Offset",
+    },
+    "operationLockActive": {
+        "translation_key": "operation_lock",
+        "class": "HcuOperationLock",
+        "name": "Operation Lock",
+    },
+    "valveState": {
+        "translation_key": "valve_state",
+        "class": "HcuValveStateSensor",
+        "name": "Valve State",
+        "device_class": SensorDeviceClass.ENUM,
+        "entity_category": EntityCategory.DIAGNOSTIC,
     },
 }
 

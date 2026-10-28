@@ -47,6 +47,10 @@ def _sample_value_for_feature(feature: str, mapping: dict) -> object:
         return 15.0
     if feature == "windowState":
         return "CLOSED"
+    if feature == "valveState":
+        return "ADAPTION_DONE"
+    if feature == "operationLockActive":
+        return False
     return 10.0
 
 
