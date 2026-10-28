@@ -943,11 +943,13 @@ def _get_group_type_mapping(
 ) -> dict[str, _GroupEntitySpec | list[_GroupEntitySpec]]:
     """Return the mapping of group types to entity specifications."""
     return {
-        "HEATING": (
-            Platform.CLIMATE,
-            climate.HcuClimate,
-            {"config_entry": config_entry},
-        ),
+        "HEATING": [
+            (Platform.CLIMATE, climate.HcuClimate, {"config_entry": config_entry}),
+            (Platform.NUMBER, number.HcuBoostDuration, {}),
+            (Platform.NUMBER, number.HcuWindowOpenTemperature, {}),
+            (Platform.NUMBER, number.HcuMinTemperature, {}),
+            (Platform.NUMBER, number.HcuMaxTemperature, {}),
+        ],
         "SHUTTER": (Platform.COVER, cover.HcuCoverGroup, {}),
         "SWITCHING": (Platform.SWITCH, switch.HcuSwitchGroup, {}),
         "SWITCHING_PROFILE": (Platform.SWITCH, switch.HcuSwitchGroup, {}),

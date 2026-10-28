@@ -46,7 +46,13 @@ from custom_components.hcu_integration.light import (
     HcuLightGroup,
     HcuSwitchLight,
 )
-from custom_components.hcu_integration.number import HcuConfigRampTime
+from custom_components.hcu_integration.number import (
+    HcuBoostDuration,
+    HcuConfigRampTime,
+    HcuMaxTemperature,
+    HcuMinTemperature,
+    HcuWindowOpenTemperature,
+)
 from custom_components.hcu_integration.select import (
     HcuAlarmSignalAcoustic,
     HcuAlarmSignalOptical,
@@ -1542,6 +1548,35 @@ async def test_group_types_discovery(
     ]
     assert len(group_entities) == 1
     assert group_entities[0].unique_id == gid
+
+
+async def test_heating_group_room_numbers_discovery(
+    hass: HomeAssistant,
+    mock_config_entry: MockConfigEntry,
+    mock_hcu_client: MagicMock,
+    mock_coordinator: MagicMock,
+) -> None:
+    """Test a HEATING group also gets its room setting numbers."""
+    mock_hcu_client.state = {
+        "devices": {},
+        "groups": {
+            "grp-heating": {
+                "id": "grp-heating",
+                "type": "HEATING",
+                "label": "Kitchen",
+                "channels": ["ch1"],
+            }
+        },
+    }
+    entities = await async_discover_entities(
+        hass, mock_hcu_client, mock_config_entry, mock_coordinator
+    )
+    assert {type(e) for e in entities[Platform.NUMBER]} == {
+        HcuBoostDuration,
+        HcuWindowOpenTemperature,
+        HcuMinTemperature,
+        HcuMaxTemperature,
+    }
 
 
 async def test_alarm_switching_group_discovery(

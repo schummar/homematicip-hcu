@@ -463,6 +463,26 @@
     "entity_id": "sensor.weather_station_temperature_2",
     "friendly_name": "Weather Station Temperature 2"
   },
+  "group-heating": {
+    "entity_id": "climate.living_room_heating",
+    "friendly_name": "Living Room Heating"
+  },
+  "group-heating_boostDuration": {
+    "entity_id": "number.living_room_heating_boost_duration",
+    "friendly_name": "Living Room Heating Boost Duration"
+  },
+  "group-heating_maxTemperature": {
+    "entity_id": "number.living_room_heating_maximum_temperature",
+    "friendly_name": "Living Room Heating Maximum Temperature"
+  },
+  "group-heating_minTemperature": {
+    "entity_id": "number.living_room_heating_minimum_temperature",
+    "friendly_name": "Living Room Heating Minimum Temperature"
+  },
+  "group-heating_windowOpenTemperature": {
+    "entity_id": "number.living_room_heating_window_open_temperature",
+    "friendly_name": "Living Room Heating Window Open Temperature"
+  },
   "hcu-central_acknowledge_safety_alarm": {
     "entity_id": "button.homematic_ip_hcu_acknowledge_safety_alarm",
     "friendly_name": "Homematic IP HCU Acknowledge safety alarm"

@@ -91,6 +91,7 @@ Configuration choices:
 Numeric settings:
 - **Ramp Time**: Configures default transition time (0.1 to 16383 seconds) for dimming channels.
 - **Temperature Offset**: Correction (-3.5 to +3.5 °C, step 0.5) the thermostat adds to its measured temperature. Use it to align radiator and wall thermostats with an external thermometer.
+- **Room settings** (on each room heating group): **Boost Duration** (5 to 30 min, step 5), **Window Open Temperature** (setpoint while a window in the room is open), and **Minimum Temperature** / **Maximum Temperature** (the range the room's setpoint can be set to, 5.0 to 30.0 °C, step 0.5).
 
 ### Text (`text`)
 Configuration fields:

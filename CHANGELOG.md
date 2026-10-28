@@ -9,6 +9,7 @@ All notable changes to the Homematic IP Local (HCU) integration will be document
 - **Thermostat temperature offset:** radiator and wall thermostats get a `number` entity *Temperature Offset* (-3.5 to +3.5 °C, step 0.5), the correction the thermostat adds to its measured temperature. Until now it could only be set in the Homematic IP app. It lets an automation align a thermostat with an external thermometer.
 - **Operation lock:** devices with an operation lock, such as radiator thermostats, get a config switch *Operation Lock* that locks the buttons on the device (child lock).
 - **Valve state:** radiator thermostats get a diagnostic sensor *Valve State* that shows the valve's adaption state, for example *Adaption done* or *Adjustment range too big*. Until now these errors were only visible in the Homematic IP app.
+- **Room settings:** each room (heating group) gets config numbers for *Boost Duration*, *Window Open Temperature*, *Minimum Temperature* and *Maximum Temperature*, which could only be set in the Homematic IP app so far.
 
 ## 2.6.1 - 2026-10-22
 

@@ -1105,6 +1105,18 @@
       }
     },
     "number": {
+      "boost_duration": {
+        "name": "Boost-Dauer"
+      },
+      "window_open_temperature": {
+        "name": "Fenster-auf-Temperatur"
+      },
+      "min_temperature": {
+        "name": "Minimaltemperatur"
+      },
+      "max_temperature": {
+        "name": "Maximaltemperatur"
+      },
       "ramp_time": {
         "name": "{channel}Rampenzeit{channel_index}"
       },

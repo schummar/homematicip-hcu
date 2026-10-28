@@ -12,7 +12,7 @@ The integration integrates heating groups and climate hardware directly. In Home
 
 | Group Type | Platform | Description |
 |---|---|---|
-| `HEATING` | `climate` | Room thermostat control with temperature setpoint, target temperature, current temperature, heating profiles, eco/party mode, and window open status. |
+| `HEATING` | `climate`, `number` | Room thermostat control with temperature setpoint, target temperature, current temperature, heating profiles, eco/party mode, and window open status. Config numbers for boost duration, window open temperature and minimum/maximum temperature. |
 | `HEATING_COOLING_DEMAND_BOILER` | `binary_sensor` | Aggregates all valve positions to signal whether the central boiler needs to fire. |
 | `HEATING_COOLING_DEMAND_PUMP` | `binary_sensor` | Indicates whether the central heating circulation pump should run. |
 | `HOT_WATER` | `switch` | Controls hot water circulation and profiles. Requires a dedicated actuator. |
